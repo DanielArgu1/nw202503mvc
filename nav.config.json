@@ -1,0 +1,60 @@
+{
+  "public": [
+    {
+      "id": "Menu_SignIn",
+      "nav_url": "index.php?page=Sec_Login",
+      "nav_label": "<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Iniciar Sesión 👤"
+    },
+    {
+      "id": "Menu_SignUp",
+      "nav_url": "index.php?page=Sec_Register",
+      "nav_label": "<i class=\"fas fa-user-plus\"></i>&nbsp;Crear Cuenta ✍🏼"
+    }
+   
+    
+  ],
+  
+  "private": [
+
+    {
+      "id": "Menu_PaymentCheckout",
+      "nav_url": "index.php?page=Checkout_Checkout",
+      "nav_label": "<i class=\"fas fa-shopping-cart\"></i>&nbsp;Carretilla de Compra 🛒"
+    },
+    {
+      "id": "Menu_Catalogo",
+      "nav_url": "index.php?page=Productos-Catalogo",
+      "nav_label": "<i class=\"fas fa-store\"></i>&nbsp;Catálogo de Productos 📦"
+    },
+    {
+      "id": "Menu_Products",
+      "nav_url": "index.php?page=Productos-Productos",
+      "nav_label": "<i class=\"fas fa-table\"></i>&nbsp;Administrar Productos 📋"
+    },
+    {
+      "id": "Menu_Categorias",
+      "nav_url": "index.php?page=Categorias-Categorias",
+      "nav_label": "<i class=\"fas fa-th-list\"></i>&nbsp;Gestión de Categorías 🗃️"
+    },
+    {
+      "id": "Menu_Proveedores",
+      "nav_url": "index.php?page=Proveedores-Proveedores",
+      "nav_label": "<i class=\"fas fa-truck\"></i>&nbsp;Catálogo de Proveedores 🚚"
+    },
+    {
+      "id": "Menu_Usuarios",
+      "nav_url": "index.php?page=Usuarios-Usuarios",
+      "nav_label": "<i class=\"fas fa-users\"></i>&nbsp;Control de Usuarios 🪪"
+    },
+    {
+      "id": "Menu_MisCompras",
+      "nav_url": "index.php?page=Orders-MyOrders",
+      "nav_label": "<i class=\"fas fa-receipt\"></i>&nbsp;Mis Compras 🛍️"
+    },
+    {
+      "id": "Menu_HistorialGeneral",
+      "nav_url": "index.php?page=Orders-AdminOrders",
+      "nav_label": "<i class=\"fas fa-clipboard-list\"></i>&nbsp;Órdenes de Clientes 🧾"
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+/*======================================================*/
+/* 1. ESTILOS DE AUTENTICACIÓN            */
+/*======================================================*/
+
+/* Contenedor principal para centrar Login/Registro */
+.fullCenter {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilo de la tarjeta del formulario de Login/Registro */
+/* El form-header y form-body deben compartir las mismas columnas/offset para unirse */
+
+/* Cabecera del formulario (Morado) */
+.form-header {
+    /* La sombra se divide entre el header y el body para el efecto de tarjeta unificada */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    border-radius: 18px 18px 0 0; /* Bordes redondeados solo arriba */
+    padding: 15px 0;
+    z-index: 2; 
+    /* El color de fondo debe ir en el HTML: style="background-color: rgb(152, 40, 196);" */
+}
+
+/* Título de la Cabecera */
+.form-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0; /* CRÍTICO: Elimina el margen para unirlo al cuerpo */
+    text-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+/* Cuerpo del formulario (Blanco) */
+.form-body {
+    background: #ffffff;
+    border-radius: 0 0 18px 18px; /* Bordes redondeados solo abajo */
+    padding: 30px 25px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); /* Sombra principal */
+    animation: fadeIn .7s ease;
+    margin-top: -1px; /* Para asegurar que se pegue al header */
+    z-index: 1;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to  { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos de los campos de entrada */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    color: #5a4e7c;
+}
+
+.input-field,
+textarea,
+select { /* Aplicado a select y textarea para consistencia */
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #d0b3ff;
+    background: #f9f6ff;
+    transition: .3s ease;
+    width: 100%; /* Para que los selects y textareas funcionen con el grid */
+    box-sizing: border-box;
+}
+
+.input-field:focus,
+textarea:focus,
+select:focus {
+    border-color: #a06cd5;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(160,108,213,0.4);
+}
+
+.width-full {
+    width: 100%;
+}
+
+/* Mensajes de Error */
+.error-message,
+.error,
+.general-error-message {
+    background: #ffe3e3;
+    border-left: 4px solid #ff7070;
+    color: #b70000;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Botón de Login/Registro */
+.form-actions {
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    width: 100%;
+}
+
+.btn-login {
+    background: #8a4ef5;
+    color: #fff;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: .3s ease;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.btn-login:hover {
+    background: #6f38c5;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+
+/*======================================================*/
+/* 2. ESTILOS DE ADMINISTRACIÓN           */
+/*======================================================*/
+
+/* --- Estilos Comunes (Formularios y Listados) --- */
+
+/* Estilo de la tarjeta principal (listado y formulario de producto) */
+.form-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+/* Encabezado de la Sección Admin (donde está el h2) */
+.form-header-admin {
+    background-color: #f8f9fa; /* Fondo gris claro */
+    border-bottom: 2px solid #a06cd5; /* Línea de color de marca */
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.form-header-admin h2 {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Botón Primario Admin (Confirmar/Guardar) */
+.btn-admin {
+    background: #8a4ef5;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s ease;
+    font-weight: bold;
+}
+
+.btn-admin:hover {
+    background: #6f38c5;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Botón Secundario Admin (Cancelar/Volver) */
+.btn-secondary {
+    background: #ccc;
+    color: #333;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.btn-secondary:hover {
+    background: #bbb;
+}
+
+/* --- Formulario de Edición/Detalle de Producto --- */
+
+/* Asegura que los campos en el formulario de producto tengan margen */
+.grid .row {
+    margin-bottom: 15px; 
+}
+
+/* Contenedor de acciones para alinear a la derecha */
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Espacio entre los botones */
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    width: 100%;
+}
+
+/* Estilo para la imagen actual en la vista de producto */
+img[alt="Imagen producto"] {
+    display: block;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* --- Listado de Productos (Tabla) --- */
+
+.admin-list-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px !important;
+}
+
+.list-header h2 {
+    font-size: 1.8rem;
+    color: #495057;
+    margin: 0;
+}
+
+.btn-action { /* Botón principal del listado (Agregar Producto) */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    background-color: #8a4ef5; 
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #6f38c5;
+}
+
+.btn-small { /* Botón 'Nuevo' dentro del encabezado de la tabla */
+    padding: 6px 10px !important;
+    font-size: 0.85rem !important;
+}
+
+/* Estilo de la tabla de datos */
+.table-responsive {
+    overflow-x: auto; 
+}
+
+.data-table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.data-table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f0f0f5; 
+}
+
+.inactive-row {
+    opacity: 0.6;
+}
+
+/* Badges de Estado */
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-ACT { background-color: #d4edda; color: #155724; }
+.status-INA { background-color: #fff3cd; color: #856404; }
+.status-DSC { background-color: #f8d7da; color: #721c24; }
+
+/* Botones de Acción de Fila (Iconos) */
+.action-cell a {
+    margin: 0 5px;
+    font-size: 1.1em;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.btn-icon:hover {
+    transform: scale(1.1);
+}
+
+.btn-view { color: #007bff; }
+.btn-edit { color: #8a4ef5; }
+.btn-delete { color: #dc3545; }
+
+
+/* --- UTILIDADES DE ALINEACIÓN --- */
+.text-right { text-align: right; }
+.text-center { text-align: center; }
