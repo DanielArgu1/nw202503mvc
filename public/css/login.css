@@ -1,0 +1,128 @@
+.fullCenter {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-body {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 25px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  animation: fadeIn .7s ease;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+.input-field {
+  padding: 12px 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid #d0b3ff;
+  background: #f9f6ff;
+  transition: .3s ease;
+}
+
+.input-field:focus {
+  border-color: #a06cd5;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(160,108,213,0.4);
+}
+
+label {
+  font-weight: 600;
+  color: #5a4e7c;
+}
+
+.error-message,
+.general-error-message {
+  background: #ffe3e3;
+  border-left: 4px solid #ff7070;
+  color: #b70000;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.btn-login {
+  background: #8a4ef5;
+  color: #fff;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: .3s ease;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.btn-login:hover {
+  background: #6f38c5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para el Layout Básico (Si no usas un framework) */
+
+/* El contenedor principal de una fila */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px; /* Compensa el padding de las columnas */
+    margin-right: -15px;
+    width: 100%;
+}
+
+/* Base de las Columnas */
+.col-12, .col-m-8, .col-xl-6 {
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+/* Columna por defecto (100% en móvil) */
+.col-12 {
+    width: 100%;
+}
+
+/* Utilidades Flexbox */
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+/* Responsive para Pantallas Medianas (m) */
+@media (min-width: 768px) {
+    .col-m-4 {
+        width: 33.33333%; /* 4/12 de la fila */
+    }
+    .col-m-8 {
+        width: 66.66667%; /* 8/12 de la fila */
+    }
+    .offset-m-2 {
+        margin-left: 16.66667%; /* 2/12 de la fila */
+    }
+}

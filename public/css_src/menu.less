@@ -1,0 +1,71 @@
+
+@media @md {
+    // 1. Desactivar el diseño lateral (off-canvas) y hacerlo estático
+    header nav {
+        position: static !important; /* CLAVE */
+        width: auto !important;
+        height: auto !important;
+        transform: translateX(0) !important;
+        margin-top: 0px !important;
+        bottom: auto !important;
+        z-index: auto !important;
+        background-color: transparent !important; 
+        flex-grow: 1 !important; 
+    }
+
+    // 2. Ocultar el ícono de hamburguesa
+    .menu_toggle_icon {
+        display: none !important;
+    }
+    header input[type=checkbox] {
+        display: none !important;
+    }
+
+    // 3. HACER LA LISTA HORIZONTAL (¡Solución definitiva!)
+    header nav ul {
+        display: flex !important; // 🔑 ¡CLAVE! Usa flex para alinear horizontalmente
+        flex-direction: row !important; // Asegura la alineación horizontal
+        align-items: center !important;
+        border-top: none !important;
+        
+        /* Mueve los enlaces al extremo derecho del nav */
+        margin-left: auto !important; 
+    }
+
+    // 4. Estilos de los ítems en escritorio
+    header ul li {
+        border-bottom: none !important;
+        margin-left: 0.25rem !important;
+        display: block !important;
+    }
+
+    // 5. Estilo de Hover "Bonito" en escritorio
+    header ul li a,
+    header ul li span {
+        padding: 0.75rem 1rem !important;
+        font-weight: bold !important;
+    }
+
+    header ul li a:hover,
+    header ul li span:hover {
+        background-color: @primary_bg300 !important; 
+        color: @primary_text !important; 
+        border-radius: 4px !important; 
+    }
+
+    // 6. Asegurar que el header principal use flex para alinear el título y el nav
+    header {
+        display: flex !important;
+        flex-direction: row !important; 
+        justify-content: space-between !important; /* Título a la izquierda, Menú a la derecha */
+        align-items: center !important;
+        flex-wrap: wrap !important; 
+    }
+
+    header nav ul li a i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+}
+}
