@@ -50,11 +50,11 @@
   <div style="padding: 1rem;">
     <h3 style="margin-bottom: 0.5rem;">Detalles de Pago</h3>
     <p style="margin: 0.2rem 0;"><strong>ID de Pago:</strong> {{payment_id}}</p>
-    <p style="margin: 0.2rem 0;"><strong>Monto:</strong> {{amount}} {{currency}}</p>
+    <p style="margin: 0.2rem 0;"><strong>Monto:</strong> {{amount}} L</p>
   </div>
   
   <div style="padding: 1rem; background-color: #f1f2f6; text-align: center; font-size: 1.2rem; font-weight: bold;">
-    Total Pagado: {{amount}} {{currency}}
+    Total Pagado: {{amount}} L
   </div>
   
 
