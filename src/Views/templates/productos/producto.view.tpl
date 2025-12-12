@@ -1,4 +1,4 @@
-<section class="depth-2 px-2 py-2">
+<section class="depth-2 px-2 py-2 form-header-admin">
     <h2>{{modeDsc}}</h2>
 </section>
 <section class="grid py-4 px-4 my-4">

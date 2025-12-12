@@ -1,29 +1,53 @@
-<section class="grid py-4 px-4 my-4" style="display: flex; justify-content: center;">
-  <form style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 400px;">
+<section class="depth-2 px-2 py-2 form-header-admin">
+    <h2>{{modeDsc}}</h2>
+</section>
 
-    <label>ID</label>
-    <input type="text" name="usercod" value="{{usercod}}" readonly />
+<section class="grid py-4 px-4 my-4">
+    <div class="row">
+        <div class="col-12 offset-m-1 col-m-10 offset-l-3 col-l-6">
+            <form class="row" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                
+                <div class="row">
+                    <label for="usercod" class="col-12 col-m-4">ID</label>
+                    <input type="text" class="col-12 col-m-8" name="usercod" id="usercod" value="{{usercod}}" readonly />
+                </div>
 
-    <label>Correo</label>
-    <input type="email" name="useremail" value="{{useremail}}" readonly />
+                <div class="row">
+                    <label for="useremail" class="col-12 col-m-4">Correo</label>
+                    <input type="email" class="col-12 col-m-8" name="useremail" id="useremail" value="{{useremail}}" readonly />
+                </div>
 
-    <label>Nombre</label>
-    <input type="text" name="username" value="{{username}}" readonly />
+                <div class="row">
+                    <label for="username" class="col-12 col-m-4">Nombre</label>
+                    <input type="text" class="col-12 col-m-8" name="username" id="username" value="{{username}}" readonly />
+                </div>
 
-    <label>Fecha Ingreso</label>
-    <input type="text" name="userfching" value="{{userfching}}" readonly />
+                <div class="row">
+                    <label for="userfching" class="col-12 col-m-4">Fecha Ingreso</label>
+                    <input type="text" class="col-12 col-m-8" name="userfching" id="userfching" value="{{userfching}}" readonly />
+                </div>
 
-    <label>Estado</label>
-    <input type="text" name="userest" value="{{userest}}" readonly />
+                <div class="row">
+                    <label for="userest" class="col-12 col-m-4">Estado</label>
+                    <input type="text" class="col-12 col-m-8" name="userest" id="userest" value="{{userest}}" readonly />
+                </div>
 
-    <label>Expiración Contraseña</label>
-    <input type="text" name="userpswdexp" value="{{userpswdexp}}" readonly />
+                <div class="row">
+                    <label for="userpswdexp" class="col-12 col-m-4">Expiración Contraseña</label>
+                    <input type="text" class="col-12 col-m-8" name="userpswdexp" id="userpswdexp" value="{{userpswdexp}}" readonly />
+                </div>
 
-    <label>Tipo</label>
-    <input type="text" name="usertipo" value="{{usertipo}}" readonly />
+                <div class="row">
+                    <label for="usertipo" class="col-12 col-m-4">Tipo</label>
+                    <input type="text" class="col-12 col-m-8" name="usertipo" id="usertipo" value="{{usertipo}}" readonly />
+                </div>
 
-    <button id="btnCancel" type="button">Cancelar</button>
-  </form>
+                <div class="row flex-end">
+                    <button id="btnCancel" type="button">Volver</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </section>
 
 <script>
